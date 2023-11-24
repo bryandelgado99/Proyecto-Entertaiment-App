@@ -27,7 +27,8 @@
     /*Font Size*/
     --title_size: 1.2rem;
     --subtitle_size: 1.15rem;
-    --general_text-size: 14px;
+    --general_text-size:1.2rem;
+    --hyper_tyle_size: 5rem;
 }
 
 /*HTML Style*/
@@ -39,9 +40,9 @@ body{
     align-items: center;
 }
 
-/*Navbar Styles*/
+/*Navbar Styles -------------------------------------*/
 .header{
-    position: absolute;
+    position: fixed;
     display: flex;
     width: 100%;
     height: 10vh;
@@ -54,8 +55,6 @@ body{
         align-items: center;
         width: 100%;
         background-color: var(--Oxford_Blue);
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
         padding: 0 25px;
 
         & .icon_nav{
@@ -69,19 +68,25 @@ body{
             }
         }
 
-        & .nav ul li{
+        & .nav ul .item_nav{
             display: inline-flex;
             justify-content: space-between;
             align-items: right;
             font-family: var(--title_subtitle_font);
             font-size: var(--title_size);
             font-weight: 600;
-            padding: 0px 25px;
-            transition: .3s all ease-in-out;
+            padding: 0px 10px;
+            z-index: 5;
+            right: 35px;
+            margin-top: 15px;
+            margin-right: 10px;
 
                 & a{
+                    justify-content: space-between;                    
                     text-decoration: none;
                     color: white;
+                    padding: 0px 10px;
+                    transition: .3s all ease-in-out;
                 }
 
                 & .search_bar{
@@ -91,8 +96,10 @@ body{
                     border-radius: 25px;
                     border: none;
                     width: 35px;
+                    height: 35px;
                     transition: .3s all ease-in-out;
                     font-family: var(--general_text_font);
+                    margin-right: 100px;
                 }
 
                 & .search_bar:hover{
@@ -107,11 +114,28 @@ body{
             }
         }
 
-        & .nav ul li a:hover{
+        & .nav ul .item_nav a:hover{
             cursor: pointer;
             transform: scale(1.15); 
             color: var(--Almond);  
             font-weight: 700;   
+        }
+
+        & .nav ul .github_icon a .bxl-github{
+            position: absolute;
+            display: flex;
+            justify-content: space-around;
+            align-items: right;
+            font-size: 2.4rem;
+            top: 12px;
+            right: 50px;
+            color: white;
+            transition: .3s all ease-in-out;
+        }
+
+        & .nav ul .github_icon a .bxl-github:hover{
+            color: var(--Almond);
+            transform: translateY(-5px) scale(1.10);
         }
 }
 
@@ -124,4 +148,76 @@ body{
 
 .search_bar:hover::placeholder{
     color: black;
+}
+
+/*-----------------------------------------------------*/
+
+/*Main Styles*/
+.main{
+    position: absolute;
+    top: 90px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1.5fr 1.5fr 1.5fr; 
+    gap: 0px 0px; 
+    width: 100%;
+    height: auto;
+}
+
+/*Section A styles*/
+.section_a{
+    grid-area: 1 / 1 / 2 / 3;
+    background-color: var(--Rose_quarz);
+    display: flex;
+    flex-direction: row;
+
+    & .main_image{
+        display: flex;
+        margin-top: 230px;
+        margin-right: 12%;
+    }
+
+    & .main_text{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        padding: 50px;
+
+        & .title{
+            position: relative;
+            font-family: var(--title_subtitle_font);
+            font-size: 6rem;
+            padding: 25px 0px;
+            letter-spacing: 5px;
+            margin-top: 200px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        & h2{
+            font-family: var(--title_subtitle_font); 
+            font-size: var(--subtitle_size);
+            text-align: center;
+        }
+
+        & .paragraph{
+            margin-top: 20px;
+            font-family: var(--general_text_font);
+            font-size: var(--general_text-size);
+            text-align: justify;
+            padding: 50px;
+        }
+    }
+}
+
+/*Section B styles*/
+.section_b{
+    grid-area: 2 / 1 / 3 / 3;
+    background-color: var(--Almond);
+}
+
+/*Section C styles*/
+.section_c{
+    grid-area: 3 / 1 / 4 / 3;
+    background-color: var(--Ultra_Violet);
 }
