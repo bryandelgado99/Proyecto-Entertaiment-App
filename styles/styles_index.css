@@ -176,7 +176,7 @@ body{
     grid-template-rows: 1.5fr 1.5fr 1.5fr; 
     gap: 0px 0px; 
     width: 100%;
-    background-color: var(--Rose_quarz);
+    height: 100vh;    background-color: var(--Rose_quarz);
     scroll-snap-type: y mandatory;
 }
 
