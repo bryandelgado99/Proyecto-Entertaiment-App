@@ -31,6 +31,15 @@
     --hyper_tyle_size: 5rem;
 }
 
+/*Other styles*/
+.down_scroll{
+    margin-top: 15px;
+    background-color: #A69CAC;
+    border-radius: 25px;
+    margin-left: 25px;
+    transform: scale(0.92);
+}
+
 /*HTML Style*/
 body{
     display: flex;
@@ -42,12 +51,13 @@ body{
 
 /*Navbar Styles -------------------------------------*/
 .header{
-    position: fixed;
     display: flex;
     width: 100%;
     height: 10vh;
     justify-content: center;
-    top: 0px;
+    top: 0px; 
+    position: fixed;
+    z-index: 99;
 
     & .navbar{
         display: flex;
@@ -56,6 +66,10 @@ body{
         width: 100%;
         background-color: var(--Oxford_Blue);
         padding: 0 25px;
+        position: absolute;
+        height: 100%;
+        top: 0px;
+        transition: .1s all ease-in-out;
 
         & .icon_nav{
             display: inline-flex;
@@ -85,7 +99,7 @@ body{
                     justify-content: space-between;                    
                     text-decoration: none;
                     color: white;
-                    padding: 0px 10px;
+                    padding: 10px;
                     transition: .3s all ease-in-out;
                 }
 
@@ -131,6 +145,7 @@ body{
             right: 50px;
             color: white;
             transition: .3s all ease-in-out;
+            padding:5px 0;
         }
 
         & .nav ul .github_icon a .bxl-github:hover{
@@ -150,18 +165,19 @@ body{
     color: black;
 }
 
+
+
 /*-----------------------------------------------------*/
 
 /*Main Styles*/
 .main{
-    position: absolute;
-    top: 90px;
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1.5fr 1.5fr 1.5fr; 
     gap: 0px 0px; 
     width: 100%;
-    height: auto;
+    background-color: var(--Rose_quarz);
+    scroll-snap-type: y mandatory;
 }
 
 /*Section A styles*/
@@ -170,6 +186,8 @@ body{
     background-color: var(--Rose_quarz);
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    height: 100vh;
 
     & .main_image{
         display: flex;
@@ -189,29 +207,121 @@ body{
             font-size: 6rem;
             padding: 25px 0px;
             letter-spacing: 5px;
-            margin-top: 200px;
+            margin-top: 225px;
             text-align: center;
             font-weight: 600;
         }
 
         & h2{
-            font-family: var(--title_subtitle_font); 
-            font-size: var(--subtitle_size);
+            font-family: var(--general_text_font); 
+            font-size: 1.4rem;
             text-align: center;
         }
 
         & .paragraph{
-            margin-top: 20px;
+            margin-top: 40px;
             font-family: var(--general_text_font);
-            font-size: var(--general_text-size);
+            font-size: 1.25rem;
             text-align: justify;
             padding: 50px;
         }
     }
 }
 
+/*Button Styles*/
+button {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: 1rem;
+    font-family: var(--general_text_font);
+    bottom: 100px;
+    right: 80px;
+}
+
+button.learn-more {
+    width: 12rem;
+    height: auto;
+}
+
+button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #282936;
+    border-radius: 25px;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+    color: #fff;
+}
+
 /*Section B styles*/
 .section_b{
+    z-index: 20;
     grid-area: 2 / 1 / 3 / 3;
     background-color: var(--Almond);
 }
@@ -219,5 +329,5 @@ body{
 /*Section C styles*/
 .section_c{
     grid-area: 3 / 1 / 4 / 3;
-    background-color: var(--Ultra_Violet);
+    background-color: var(--Rick_Black);
 }
