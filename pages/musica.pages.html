@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Música</title>
+		<title>Fun.ly | Música</title>
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="../assets/icons/favicon_1@0.5x.png" type="image/x-icon" />
+		<link rel="shortcut icon" href="../assets/images/headphones.png" type="image/x-icon" />
 
 		<!-- Links and fonts -->
 		<link rel="stylesheet" href="../styles/musica.pages.css" />
@@ -58,6 +58,16 @@
 			</nav>
 		</header>
 
+		<h1>Buscador MUSICA</h1>
+
+		<form id="searchForm">
+			<label for="titleInput">Buscar por título:</label>
+			<input type="text" id="titleInput" name="titleInput" required />
+			<button type="submit">Buscar</button>
+		</form>
+
+		<!-- Aquí se mostrará el resultado de la búsqueda -->
+		<div id="resultContainer"></div>
 		<!-- Scripts -->
 		<script src="../scripts/musica.script.js"></script>
 	</body>
