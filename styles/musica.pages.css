@@ -179,3 +179,24 @@ body {
 }
 
 /*Section A styles*/
+
+h1 {
+	margin-top: 5rem;
+}
+
+/* container song */
+#resultContainerSong {
+	display: flex;
+	width: 100%;
+	padding: 1rem;
+}
+#infosongcontainer{
+	display: flex;
+	padding: 1rem;
+	width: 100%;
+	justify-content: space-around;
+}
+
+img{
+	height: 7rem;
+}
