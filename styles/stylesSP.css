@@ -109,3 +109,48 @@ body {
     z-index: -1; /* Añadido para estar detrás del contenido principal */
     border-radius: 10px;
 }
+
+
+/* Estilos para la sección Top Series y Películas */
+/* Estilos para la sección Top Series y Películas */
+.top-media-section {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px; /* Agregado relleno para separar el contenido del borde */
+    background-color: rgba(173, 216, 230, 0.5); /* Fondo celeste semitransparente */
+    border-radius: 10px; /* Borde redondeado */
+}
+
+.top-media {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.top-media-item {
+    width: 250px;
+    margin-bottom: 20px;
+    background-color: #fff; /* Fondo blanco */
+    padding: 10px; /* Agregado relleno para separar el contenido del borde */
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.top-media-item h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.top-media-item p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.top-media-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

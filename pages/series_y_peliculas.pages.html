@@ -60,7 +60,11 @@
         </div>
         <div id="mediaDetails" class="media-details"></div>
     </section>
-
+    <!--Seccion de Top-->
+    <section class="top-media-section animate__animated animate__fadeIn animate__delay-2s">
+        <h2>Top Series y Películas del Momento</h2>
+        <div id="topMedia" class="top-media"></div>
+    </section>
     <!-- Scripts -->
     <script>
         function handleKeyPress(event) {
@@ -100,6 +104,42 @@
                     console.error('Error al buscar la película o serie:', error);
                 });
         }
+        // Agrega esta función al script existente
+function cargarTopMedia() {
+    const apiKey = 'c55a99ce257fed54aab36a81a1125aec';
+    const url = `https://api.themoviedb.org/3/trending/all/week?api_key=${apiKey}`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const topMediaContainer = document.getElementById('topMedia');
+            topMediaContainer.innerHTML = ''; // Limpiar contenido anterior
+
+            if (data.results && data.results.length > 0) {
+                data.results.slice(0, 5).forEach(media => {
+                    const posterPath = media.poster_path ? `https://image.tmdb.org/t/p/w500${media.poster_path}` : '';
+                    const mediaDetails = `
+                        <div class="top-media-item">
+                            <h3>${media.title || media.name}</h3>
+                            <p>Tipo: ${media.media_type}</p>
+                            <p>Año de lanzamiento: ${media.release_date || media.first_air_date}</p>
+                            <img src="${posterPath}" alt="${media.title || media.name} Poster">
+                        </div>
+                    `;
+                    topMediaContainer.innerHTML += mediaDetails;
+                });
+            } else {
+                topMediaContainer.innerHTML = 'No se encontraron resultados';
+            }
+        })
+        .catch(error => {
+            console.error('Error al cargar el top de series y películas:', error);
+        });
+}
+
+
+document.addEventListener('DOMContentLoaded', cargarTopMedia);
+
     </script>
 </body>
 
