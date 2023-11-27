@@ -13,8 +13,9 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&family=Raleway:wght@300;400;500;600&display=swap"
+			href="https://db.onlinewebfonts.com/c/6e4a9679e65cc320746c3e5d48e51f28?family=Raleway"
 			rel="stylesheet"
+			type="text/css"
 		/>
 
 		<!-- Animation CSS -->
@@ -61,9 +62,16 @@
 		<h1>Buscador MUSICA</h1>
 
 		<form id="searchForm">
-			<label for="titleInput">Buscar por título:</label>
-			<input type="text" id="titleInput" name="titleInput" required />
-			<button type="submit">Buscar</button>
+			<input
+				type="text"
+				id="titleInput"
+				name="titleInput"
+				required
+				placeholder="Buscar Música/Audio Libros/Podcast/etc"
+			/>
+			<button type="submit" id="buttonsubmit">
+				<img src="../assets/images/search.png" alt="Buscar" />
+			</button>
 		</form>
 
 		<!-- Aquí se mostrará el resultado de la búsqueda -->
