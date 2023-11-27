@@ -130,7 +130,7 @@ body{
 
         & .nav ul .item_nav a:hover{
             cursor: pointer;
-            transform: scale(1.15); 
+            transform: scale(1.10); 
             color: var(--Almond);  
             font-weight: 700;   
         }
@@ -152,6 +152,10 @@ body{
             color: var(--Almond);
             transform: translateY(-5px) scale(1.10);
         }
+}
+
+.github_icon {
+    list-style: none;
 }
 
 /*Search Bar Placeholder icon*/
