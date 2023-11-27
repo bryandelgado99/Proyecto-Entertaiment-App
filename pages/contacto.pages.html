@@ -16,7 +16,7 @@
     
     <!-- Animation CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
+
     <!-- Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -28,7 +28,7 @@
     <header class="header animate__animated animate__fadeInDown">
         <nav class="navbar" id="navbar">
         <div class="icon_nav animate__animated animate__fadeInDown animate__delay-0.5s">
-            <img src="./assets/images/icon@3x.png" alt="web-logo">
+            <img src="/assets/images/icon@3x.png" alt="web-logo">
         </div>
         <div class="nav animate__animated animate__fadeInDown animate__delay-1s">
             <ul>
@@ -46,47 +46,66 @@
     </header>
 
     <!-- Main Sections -->
-    <div id="contenidos-paginas">
-		<div id="centro">
-			<h2>
-				<em class="encabezado">Contáctanos</em> 
-			</h2>
-            
-			<hr>
+    <main class="main_ctn">
+        <h1 class="contact_title animate__animated animate__fadeInDown animate__delay-1s"> Contáctanos</h1>
+        <div class="cont_inf">
+            <section class="mail_container animate__animated animate__fadeInLeft animate__delay-2s">
+                <h3 class="title">Envíanos un correo</h3>
 
-			<div id="contenido-nosotros">
-				
-				<div id="izquierda">
-					<p class="texto-contacto">
-						<ion-icon name="call"></ion-icon> Telélefono: <strong>312849235</strong><br><br>
-                        <ion-icon name="phone-portrait"></ion-icon>Celular: <strong>0983246234</strong><br><br>
-                        <ion-icon name="mail"></ion-icon> Email: <strong><a href="gmail: juanventura200@gmail.com" class="gmail-contacto">funly@gmail.com</a></strong>
-					</p>
-				</div>	
+                <div class="content">
+                    <form class="form" action="#" method="POST">
+                        <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="nombre-mensaje">
+                        <br>
+                        <input type="email" name="correo" placeholder="Ingresa tu correo" class="email-asunto">
+                        <br>
+                        <input type="text" name="asunto" placeholder="Ingresa el asunto" class="email-asunto"><br>
+                        <br>
+                        <textarea class="input_mensaje" name="mensaje" placeholder="Ingrese su mensaje "></textarea>
+                        <br>
+                        <br>
+                        <input class="enviar_button" type="submit" name="enviar" value="Enviar consulta">
+                    </form>
+                </div>
+            </section>
 
+            <section class="data_container animate__animated animate__fadeInRight animate__delay-2s">
+                <h3 class="title">Redes Sociales</h3>
+                <div class="redes_grid">
+                    <div class="social_ico_grid"><i class='bx bxl-facebook-circle'></i></div>
+                    <div class="social_ico_grid"><i class='bx bxl-twitter'></i></div>
+                    <div class="social_ico_grid"><i class='bx bxl-mastodon'></i></div>
+                </div>   
+                <div class="redes_grid">
+                    <div class="social_ico_grid"><i class='bx bxl-youtube' ></i></div>
+                    <div class="social_ico_grid"><i class='bx bxl-instagram-alt' ></i></div>
+                    <div class="social_ico_grid"><i class='bx bxl-github' ></i></div>
+                </div>    
+                <div class="text_grid">
+                    Síguenos y mantente al tanto de las novedades que se implementen a futuro.
+                </div>                    
+            </section>
+        </div>
 
-				<div id="derecha">
-					<form action="#" method="POST">
-						<input type="text" name="nombre" placeholder="Ingresa tu nombre" class="nombre-mensaje">
-						
-						<input type="email" name="correo" placeholder="Ingresa tu correo" class="email-asunto">
+        <section class="map_container animate__animated animate__fadeInLeft animate__delay-2s">
+            <h3 class="title">Ubícanos</h3>
+            <div class="ub_info">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.790919037483!2d-78.49318458848684!3d-0.21234739978467307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sESCUELA%20POLIT%C3%89CNICA%20NACIONAL!5e0!3m2!1ses-419!2sec!4v1701018255731!5m2!1ses-419!2sec" frameborder="0" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="contact_grid">
+                    <p class="direccion"><i class='bx bx-home-heart' ></i> - Av. Ladrón de Guevara N-123 e Isabel la Católica</p>
+                    <p class="direccion"><i class='bx bx-home-smile' ></i> - Av. 12 de Octubre OE-456 y Veintimilla</p> 
+                    <br>
+                    <p class="cont_info"><i class='bx bxs-phone-call' ></i>:    (+593)987500764</p>
+                    <p class="cont_info"><i class='bx bxs-phone-call' ></i>:    (+593)983246234</p>
+                    <p class="cont_info"><i class='bx bx-mail-send' ></i>:   contact_user@funly.ec</p>
+                </div>
+            </div>
+        </section>
+	</main>
 
-						<input type="text" name="asunto" placeholder="Ingresa el asunto" class="email-asunto"><br>
-
-						<textarea name="mensaje" placeholder="Ingrese su mensaje " class="nombre-mensaje"></textarea>
-
-						<input type="submit" name="enviar" value="Enviar consulta">
-					</form>
-				</div>
-
-				<div id="mapa">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.790919037483!2d-78.49318458848684!3d-0.21234739978467307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a107e1cd44b%3A0x88a284f66939ed4!2sESCUELA%20POLIT%C3%89CNICA%20NACIONAL!5e0!3m2!1ses-419!2sec!4v1701018255731!5m2!1ses-419!2sec" width="1870" height="450" frameborder="0" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-                
-			</div>
-
-		</div>
-	</div>
+    <!-- Footer -->
+    <footer class="footer">
+        
+    </footer>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
