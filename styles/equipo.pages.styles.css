@@ -37,14 +37,35 @@ body{
 
 .seccionA{
     width: 80%;
-    margin: 120px auto 0;
+    margin: 150px auto 0;
 }
 
 .seccionA .presentacion{ 
     text-align: center;
     line-height: 1.5;
+    background-color: var(--Oxford_Blue);
+    color: white;
+    border-radius:30px;
+    padding: 20px 20px 40px;
+    box-shadow: 0 0 15px var(--Oxford_Blue-blur);
 }
 
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title>*{
+    padding: 0 20px;
+}
+
+.title img{
+    border-radius: 50%;
+    width: 10%;
+}
 .presentacion h1{
     font-family: var(--title_subtitle_font);
     font-size: var(--hyper_tyle_size);
@@ -68,7 +89,7 @@ body{
     width: 310px;
     margin: 0 50px 20px;
     transition: all 300ms;
-    filter: drop-shadow(0 0 8px var(--Oxford_Blue));
+    filter: drop-shadow(0 0 10px var(--Oxford_Blue));
 }
 
 .card:hover{
