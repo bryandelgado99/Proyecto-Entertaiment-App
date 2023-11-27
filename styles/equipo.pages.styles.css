@@ -243,7 +243,6 @@ body{
     filter: none;
     top: 115px;
     border-radius: 25px;
-    z-index: 99;
 }
 
 .card .cover{
