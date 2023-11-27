@@ -33,17 +33,17 @@ document.addEventListener("DOMContentLoaded", function () {
 				data.result.forEach((song) => {
 					// Crear el HTML para cada canción
 					const songHTML = `
-                      <div id="resultContainerSong">
-                          <div id="imgsongcontainer"><img src="${song.thumbnail}" id="imgsongfoto"></div>
-                          <div id="infosongcontainer">
-                              <div id="titlesong"><p>${song.title}</p></div>
-                              <div id="author">${song.author}</div>
-                              <div id="duracion">${song.duration}</div>
-                              <div id="reproduccion">
-                                <a href="https://www.youtube.com/watch?v=${song.videoId}" target="_blank">Reproducir</a>
-                              </div>
-                          </div>
-                      </div>
+					<div id="resultContainerSong">
+					<div id="imgsongcontainer"><img src="${song.thumbnail}" id="imgsongfoto"></div>
+					<div id="infosongcontainer">
+					  <div id="titlesong"><p>${song.title}</p></div>
+					  <div id="author">${song.author}</div>
+					  <div id="duracion">${song.duration}</div>
+					  <div id="reproduccion">
+						<a href="https://www.youtube.com/watch?v=${song.videoId}" target="_blank">Reproducir</a>
+					  </div>
+					</div>
+				  </div>
                   `;
 
 					// Agregar el HTML al contenedor de resultados
