@@ -378,7 +378,7 @@ body{
 
             & .social_ico_grid:hover{
                 cursor: pointer;
-                color: #474973;
+                color: var(--Almond);
                 transform: translateY(-5px) scale(1.2);
             }
         }
