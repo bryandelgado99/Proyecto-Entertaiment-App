@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
 					  <div id="author">${song.author}</div>
 					  <div id="duracion">${song.duration}</div>
 					  <div id="reproduccion">
-						<a href="https://www.youtube.com/watch?v=${song.videoId}" target="_blank">Reproducir</a>
+						<a href="https://www.youtube.com/watch?v=${song.videoId}" target="_blank">
+						<img src="../assets/images/boton-de-play.png" alt="reproducir" /></a>
 					  </div>
 					</div>
 				  </div>
