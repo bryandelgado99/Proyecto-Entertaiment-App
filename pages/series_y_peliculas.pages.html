@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun.ly | Encuentra tus pasiones</title>
+    <title>Fun.ly | Películas y Series</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/icons/favicon_1@0.5x.png" type="image/x-icon">
 
     <!-- Links and fonts -->
-    <link rel="stylesheet" href="/styles/styles_index.css">
+    <link rel="stylesheet" href="/styles/series_y_peliculas.styles.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -31,116 +32,48 @@
     <header class="header animate__animated animate__fadeInDown">
         <nav class="navbar" id="navbar">
             <div class="icon_nav animate__animated animate__fadeInDown animate__delay-0.5s">
-                <img src="./assets/images/icon@3x.png" alt="web-logo">
+                <!-- revisar forma de enlazar paginas -->
+                <a href="/index.html">  
+                    <img src="/assets/images/icon@3x.png" alt="web-logo">
+                </a>
             </div>
             <div class="nav animate__animated animate__fadeInDown animate__delay-1s">
                 <ul>
                     <li class="item_nav"><a href="/index.html">Inicio</a></li>
-                    <li class="item_nav"><a href="/pages/deportes.page.html">Deportes</a></li>
-                    <li class="item_nav"><a href="/pages/series_y_peliculas.pages.html">Películas y Series</a></li>
-                    <li class="item_nav"><a href="/pages/musica.pages.html">Música</a></li>
-                    <li class="item_nav"><a href="/pages/equipo.pages.html">Nuestro Equipo</a></li>
-                    <li class="item_nav"><a href="/pages/contacto.pages.html">Contáctanos</a></li>
-                    <li class="item_nav"><input id="searchbar" class="search_bar" type="text" name="search" placeholder="" onkeyup="handleKeyPress(event)"></li>
-                    <li class="item_nav"><button onclick="buscarMedia()">Buscar</button></li>
-                    <li class="github_icon"><a href="https://github.com/bryandelgado99/Proyecto-Entertaiment-App"><i class='bx bxl-github'></i></a></li>
+                    <li class="item_nav"><a href="#search-section">Buscador</a></li>
+                    <li class="item_nav"><a href="#top-media-section">Top Películas y Series</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <!-- Main Sections -->
-    <link rel="stylesheet" href="/styles/stylesSP.css">
+    
     <!-- Search Section -->
-    <section class="search-section animate__animated animate__fadeIn animate__delay-1s">
-        <h2>Encuentra tus pasiones</h2>
-        <p>Descubre películas y series que te encantarán</p>
-        <div class="search-container">
-            <input id="mediaInput" class="search-bar" type="text" name="search" placeholder="Buscar películas y series" onkeyup="handleKeyPress(event)">
+    <section class="search-section animate__animated animate__fadeIn animate__delay-1s" id="search-section">
+        <div class="main-search-container">
+            <h2>Encuentra tus pasiones</h2>
+            <p>Descubre películas y series que te encantarán</p>
+            <div class="search-container">
+                <input id="mediaInput" class="search-bar" type="text" name="search" placeholder="Buscar películas y series" onkeyup="handleKeyPress(event)">
+            </div>
+
+            <div id="mediaDetails" class="media-details"></div>
+            
         </div>
-        <div id="mediaDetails" class="media-details"></div>
     </section>
-    <!--Seccion de Top-->
-    <section class="top-media-section animate__animated animate__fadeIn animate__delay-2s">
-        <h2>Top Series y Películas del Momento</h2>
-        <div id="topMedia" class="top-media"></div>
+
+    <!--Top Movies and Series Section-->
+    <section class="top-media-section animate__animated animate__fadeIn animate__delay-2s" id="top-media-section">
+        <div class="main-top-media-container">
+            <h2>Top Películas y Series del Momento</h2>
+            <div id="topMedia" class="top-media"></div>
+        </div>
     </section>
+
     <!-- Scripts -->
-    <script>
-        function handleKeyPress(event) {
-            // Verificar si la tecla presionada es "Enter"
-            if (event.key === "Enter") {
-                buscarMedia();
-            }
-        }
+    <script src="/scripts/peliculas_y_series.script.js"></script>
 
-        function buscarMedia() {
-            const apiKey = 'c55a99ce257fed54aab36a81a1125aec'; // Reemplaza con tu clave de API de TMDb
-            const mediaName = document.getElementById('mediaInput').value;
-            const url = `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${mediaName}`;
-
-            fetch(url)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.results && data.results.length > 0) {
-                        const media = data.results[0];
-                        const posterPath = media.poster_path ? `https://image.tmdb.org/t/p/w500${media.poster_path}` : '';
-
-                        const mediaDetails = `
-                            <h2>${media.title || media.name}</h2>
-                            <p>Tipo: ${media.media_type}</p>
-                            <p>Año de lanzamiento: ${media.release_date || media.first_air_date}</p>
-                            <p>Descripción: ${media.overview}</p>
-                            <p>Puntuación: ${media.vote_average}</p>
-                            <img src="${posterPath}" alt="${media.title || media.name} Poster">
-                        `;
-
-                        document.getElementById('mediaDetails').innerHTML = mediaDetails;
-                    } else {
-                        document.getElementById('mediaDetails').innerHTML = 'No se encontraron resultados';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error al buscar la película o serie:', error);
-                });
-        }
-        // Agrega esta función al script existente
-function cargarTopMedia() {
-    const apiKey = 'c55a99ce257fed54aab36a81a1125aec';
-    const url = `https://api.themoviedb.org/3/trending/all/week?api_key=${apiKey}`;
-
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            const topMediaContainer = document.getElementById('topMedia');
-            topMediaContainer.innerHTML = ''; // Limpiar contenido anterior
-
-            if (data.results && data.results.length > 0) {
-                data.results.slice(0, 5).forEach(media => {
-                    const posterPath = media.poster_path ? `https://image.tmdb.org/t/p/w500${media.poster_path}` : '';
-                    const mediaDetails = `
-                        <div class="top-media-item">
-                            <h3>${media.title || media.name}</h3>
-                            <p>Tipo: ${media.media_type}</p>
-                            <p>Año de lanzamiento: ${media.release_date || media.first_air_date}</p>
-                            <img src="${posterPath}" alt="${media.title || media.name} Poster">
-                        </div>
-                    `;
-                    topMediaContainer.innerHTML += mediaDetails;
-                });
-            } else {
-                topMediaContainer.innerHTML = 'No se encontraron resultados';
-            }
-        })
-        .catch(error => {
-            console.error('Error al cargar el top de series y películas:', error);
-        });
-}
-
-
-document.addEventListener('DOMContentLoaded', cargarTopMedia);
-
-    </script>
 </body>
 
 </html>
