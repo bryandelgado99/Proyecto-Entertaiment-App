@@ -47,7 +47,7 @@ body {
 	padding: 0;
 	justify-content: center;
 	align-items: center;
-	background-image: linear-gradient(to right, #000, #fff);	
+	background-image: linear-gradient(to right, #000, #fff);
 	color: white;
 }
 
@@ -200,7 +200,7 @@ h1 {
 	font-size: 15px;
 }
 
-/* container song */
+/* Contenedor de canciones */
 #resultContainer {
 	width: 100%;
 }
@@ -239,4 +239,8 @@ h1 {
 #reproduccion {
 	grid-column: 4 / 5;
 	grid-row: 1 / 2;
+}
+
+#reproduccion img {
+	width: 75px;
 }
