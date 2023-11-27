@@ -136,9 +136,34 @@ body{
             font-weight: 700;   
         }
 
-        & .nav ul {
-            transform: translateY(-9px) scale(1);
+        & .nav ul .github_icon a .bxl-github{
+            position: absolute;
+            display: flex;
+            justify-content: space-around;
+            align-items: right;
+            font-size: 2.4rem;
+            top: 12px;
+            right: 50px;
+            color: white;
+            transition: .3s all ease-in-out;
+            padding:5px 0;
         }
+
+        & .nav ul .github_icon a .bxl-github:hover{
+            color: var(--Almond);
+            transform: translateY(-5px) scale(1.10);
+        }
+}
+
+/*Search Bar Placeholder icon*/
+.search_bar::placeholder{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; 
+    color: white;
+}
+
+.search_bar:hover::placeholder{
+    color: black;
 }
 
 /* Search Section Styles */
