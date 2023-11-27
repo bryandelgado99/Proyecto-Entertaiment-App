@@ -29,11 +29,6 @@ function buscarMedia() {
                 const posterPath = media.poster_path ? `https://image.tmdb.org/t/p/w500${media.poster_path}` : '';
 
                 const mediaDetails = `
-                    <style>
-                        .main-search-container {
-                            margin-top: 10vh;
-                        }
-                    </style>
                     <h2>${media.title || media.name}</h2>
                     <div class="content-media-container">
                         <div class="information-media">
@@ -75,7 +70,7 @@ fetch(url)
                     <h3>${media.title || media.name}</h3>
                     <p><strong>Tipo:</strong> ${media.media_type}</p>
                     <p><strong>Año de lanzamiento:</strong><br> ${media.release_date || media.first_air_date}</p>
-                    <img src="${posterPath}" alt="${media.title || media.name} Poster">
+                    <img src="${posterPath}" alt="${media.title || media.name} Poster" width="140px">
                 </div>
             `;
             topMediaContainer.innerHTML += mediaDetails;

@@ -168,10 +168,8 @@ body{
 
 /* Search Section Styles */
 .search-section {
-    height: 100vh;
+    margin-top: 10vh;
     font-family: var(--general_text_font);
-    display: grid;
-    place-content: center;
 
     & .main-search-container {
         text-align: center;
@@ -241,14 +239,13 @@ body{
 
 /* Top Movies and Series Section */
 .top-media-section {
-    height: 100vh;
     font-family: var(--general_text_font);
     text-align: center;
     display: grid;
     place-content: center;
+    padding-bottom: 20px;
 
     & .main-top-media-container {
-        margin-top: 6vh;
         background-color: var(--Rose_quarz-blur);
         border-radius: 10px;  
         padding: 20px 40px;  
