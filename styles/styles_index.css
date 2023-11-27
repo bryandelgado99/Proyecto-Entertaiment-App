@@ -1,3 +1,5 @@
+@import url("/styles/header.styles.css");
+
 *{
     margin: 0;
     padding: 0;
@@ -31,15 +33,6 @@
     --hyper_tyle_size: 5rem;
 }
 
-/*Other styles*/
-.down_scroll{
-    margin-top: 15px;
-    background-color: #A69CAC;
-    border-radius: 25px;
-    margin-left: 25px;
-    transform: scale(0.92);
-}
-
 /*HTML Style*/
 body{
     display: flex;
@@ -48,130 +41,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-/*Navbar Styles -------------------------------------*/
-.header{
-    display: flex;
-    width: 100%;
-    height: 10vh;
-    justify-content: center;
-    top: 0px; 
-    position: fixed;
-    z-index: 99;
-
-    & .navbar{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        background-color: var(--Oxford_Blue);
-        padding: 0 25px;
-        position: absolute;
-        height: 100%;
-        top: 0px;
-        transition: .1s all ease-in-out;
-
-        & .icon_nav{
-            display: inline-flex;
-            justify-content: center;
-            align-items: left;
-            width: 10%;
-
-            & img{
-                transform: scale(0.08);
-            }
-        }
-
-        & .nav ul .item_nav{
-            display: inline-flex;
-            justify-content: space-between;
-            align-items: right;
-            font-family: var(--title_subtitle_font);
-            font-size: var(--title_size);
-            font-weight: 600;
-            padding: 0px 10px;
-            z-index: 5;
-            right: 35px;
-            margin-top: 15px;
-            margin-right: 10px;
-
-                & a{
-                    justify-content: space-between;                    
-                    text-decoration: none;
-                    color: white;
-                    padding: 10px;
-                    transition: .3s all ease-in-out;
-                }
-
-                & .search_bar{
-                    backdrop-filter: blur(30px);
-                    background-color: var(--Rose_quarz);
-                    padding: 10px;
-                    border-radius: 25px;
-                    border: none;
-                    width: 35px;
-                    height: 35px;
-                    transition: .3s all ease-in-out;
-                    font-family: var(--general_text_font);
-                    margin-right: 100px;
-                }
-
-                & .search_bar:hover{
-                    width: 200px;
-                    background-color: white;
-                }
-
-                & .search_bar:active{
-                    border: none;
-                    content: "";
-                }
-            }
-        }
-
-        & .nav ul .item_nav a:hover{
-            cursor: pointer;
-            transform: scale(1.10); 
-            color: var(--Almond);  
-            font-weight: 700;   
-        }
-
-        & .nav ul .github_icon a .bxl-github{
-            position: absolute;
-            display: flex;
-            justify-content: space-around;
-            align-items: right;
-            font-size: 2.4rem;
-            top: 12px;
-            right: 50px;
-            color: white;
-            transition: .3s all ease-in-out;
-            padding:5px 0;
-        }
-
-        & .nav ul .github_icon a .bxl-github:hover{
-            color: var(--Almond);
-            transform: translateY(-5px) scale(1.10);
-        }
-}
-
-.github_icon {
-    list-style: none;
-}
-
-/*Search Bar Placeholder icon*/
-.search_bar::placeholder{
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900; 
-    color: white;
-}
-
-.search_bar:hover::placeholder{
-    color: black;
-}
-
-
-
-/*-----------------------------------------------------*/
 
 /*Main Styles*/
 .main{
