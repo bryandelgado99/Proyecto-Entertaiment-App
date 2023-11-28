@@ -35,6 +35,8 @@
 
 /*HTML Style*/
 body {
+	background-image: url(/assets/images/magicpattern-grid-pattern-1701045331623.png);
+    background-color: var(--Almond);
 	display: flex;
 	flex-direction: column;
 	padding: 0;
@@ -65,15 +67,23 @@ h1 {
 	font-size: 2rem;
 }
 
+#titleInput::placeholder{
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 5px;
+}
+
 /*-----------------------------------------------------*/
 /* Contenedor de canciones */
 
 #resultContainer {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	margin-left: 5%;
-	margin-right: 5%;
-	background-color: #a99fae;
+	width: 90%;
+	gap: 10px;
+	margin-left: 100px;
+	height: auto;
+	background-color: white;
 	padding: 2%;
 	border-radius: 5rem;
 }
