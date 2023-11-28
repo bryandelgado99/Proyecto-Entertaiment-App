@@ -35,12 +35,14 @@
 
 /*HTML Style*/
 body{
+    background-image: url(/assets/images/magicpattern-grid-pattern-1701045331623.png);
     display: flex;
     flex-direction: column;
     padding: 0;
     justify-content: center;
     align-items: center;
     background-color: var(--Rose_quarz-blur);
+    font-family: var(--general_text_font);
 }
 
 
@@ -48,26 +50,36 @@ body{
 /* Estilo para la sección ZONA DEPORTIVA */
 .zona-deportiva {
     text-align: center; /* Centra el texto */
-    background-color: #ffffff; /* Color de fondo diferente */
-    padding: 10px; /* Agrega relleno */
+    background-color: var(--Almond);
+    box-shadow: 0px 8px 25px -5px;/* Color de fondo diferente */
+    padding: 25px; /* Agrega relleno */
+    z-index: 99;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 150px;
+    left: 75px;
+    border-radius: 25px;
 }
 
 /* Estilo para el contenedor de las secciones principales */
 .secciones-principales {
     display: flex;
     justify-content: space-between;
-    margin: 50px;
+    margin-top: 50px;
 }
 
 /* Estilo para cada sección principal */
 .secciones-principales section {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #ffffff;
+    padding: 25px;
+    margin-top: 25px;
 }
 /* Estilo para las imágenes dentro de las secciones */
 .secciones-principales .imagen-contenedor {
     position: relative;
+    margin-top: 50px;
 }
 
 .secciones-principales img {
@@ -86,6 +98,9 @@ body{
     font-weight: bold; /* Peso de la fuente */
     text-align: center; /* Alineación del texto */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra del texto para mayor legibilidad */
+    backdrop-filter: blur(25px);
+    padding: 25px;
+    border-radius: 25px;
 }
 /* Estilo para las imágenes dentro de las secciones */
 .secciones-principales .imagen-contenedor {
@@ -117,6 +132,10 @@ body{
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: white;
+    border-radius: 25 px;
+    margin-bottom: 50px;
+    box-shadow: 5px 8px 20px -5px;
 }
 
 .posiciones-table th,
