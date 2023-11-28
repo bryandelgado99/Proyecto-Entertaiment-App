@@ -35,6 +35,8 @@
 
 /*HTML Style*/
 body {
+	background-image: url(/assets/images/magicpattern-grid-pattern-1701045331623.png);
+    background-color: var(--Almond);
 	display: flex;
 	flex-direction: column;
 	padding: 0;
@@ -69,6 +71,12 @@ h3 {
 	font-size: 1.2rem;
 }
 
+#titleInput::placeholder{
+	font-size: 1.2rem;
+	text-align: center;
+	padding: 5px;
+}
+
 /*-----------------------------------------------------*/
 /* Contenedor de canciones */
 
@@ -77,7 +85,7 @@ h3 {
 	grid-template-columns: 1fr 1fr 1fr;
 	margin-left: 5%;
 	margin-right: 5%;
-	background-color: #a69cac;
+	background-color: #a99fae;
 	padding: 2%;
 	border-radius: 5rem;
 }

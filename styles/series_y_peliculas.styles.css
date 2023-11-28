@@ -40,7 +40,8 @@ body{
     padding: 0;
     justify-content: center;
     align-items: center;
-    background-color: var(--Rose_quarz-blur);
+    background-image: url(/assets/images/magicpattern-grid-pattern-1701045331623.png);
+    background-color: var(--Almond);
 }
 
 /* Search Section Styles */
