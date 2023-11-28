@@ -36,7 +36,6 @@
 /*HTML Style*/
 body {
 	background-image: url(/assets/images/magicpattern-grid-pattern-1701045331623.png);
-    background-color: var(--Almond);
 	display: flex;
 	flex-direction: column;
 	padding: 0;
@@ -71,7 +70,6 @@ h3 {
 	font-size: 1.2rem;
 }
 
-#titleInput::placeholder{
 	font-size: 1.2rem;
 	text-align: center;
 	padding: 5px;
