@@ -52,6 +52,7 @@
             right: 35px;
             margin-top: 15px;
             margin-right: 10px;
+            list-style: none;
 
                 & a{
                     justify-content: space-between;                    
