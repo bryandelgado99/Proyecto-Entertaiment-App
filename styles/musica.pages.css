@@ -39,9 +39,8 @@ body {
 	flex-direction: column;
 	padding: 0;
 	justify-content: center;
-	background-color: #b5acb9;
+	background-image: url("../assets/images/magicpattern-grid-pattern-1701045331623.png");
 }
-
 
 /*Busqueda*/
 h1 {
@@ -62,7 +61,7 @@ h1 {
 	height: 55px;
 	border-radius: 15px;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 1.2rem;
 }
 
 /*-----------------------------------------------------*/
