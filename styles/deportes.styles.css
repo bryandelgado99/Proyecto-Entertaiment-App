@@ -250,6 +250,8 @@ body{
     background-color: #2d65b8;
 }
 
+
+
 /* Estilos para la información del equipo (nombre y logo) */
 .equipo-info {
     display: flex;
@@ -263,5 +265,6 @@ body{
 .logo {
     width: 30px; /* Ajusta el tamaño del logo según sea necesario */
     height: auto; /* Mantiene la proporción original del logo */
+    
 }
 
