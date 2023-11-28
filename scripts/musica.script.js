@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
 					// Crear el HTML para cada canción
 					const songHTML = `
 					<div id="resultContainerSong">
-					<div id="imgsongcontainer"><img src="${song.thumbnail}" id="imgsongfoto"></div>
+					<div id="imgsongcontainer">
+					<img src="${song.thumbnail}" id="imgsongfoto" onclick="window.open('https://www.youtube.com/watch?v=${song.videoId}', '_blank')">
 					<div id="infosongcontainer">
 					  <div id="titlesong"><p>${song.title}</p></div>
 					  <div id="author">${song.author}</div>

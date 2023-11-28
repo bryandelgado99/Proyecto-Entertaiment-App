@@ -40,7 +40,6 @@ body {
 	flex-direction: column;
 	padding: 0;
 	justify-content: center;
-	background-image: url("../assets/images/magicpattern-grid-pattern-1701045331623.png");
 }
 
 /*Busqueda*/
@@ -70,6 +69,7 @@ h3 {
 	font-size: 1.2rem;
 }
 
+#titleInput {
 	font-size: 1.2rem;
 	text-align: center;
 	padding: 5px;
@@ -104,7 +104,13 @@ h3 {
 #imgsongfoto {
 	height: 11rem;
 	border-radius: 150px;
+	transition: all 0.5s ease-in-out;
 }
+
+#imgsongfoto:hover {
+	transform: scale(1.3);
+}
+
 #titlesong {
 	grid-column: 1 / 2;
 	grid-row: 1 / 2;
