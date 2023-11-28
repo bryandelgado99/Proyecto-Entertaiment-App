@@ -1,36 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root{
-
-    /*Colors*/
-    --Almond: #F1DAC4;
-    --Rose_quarz: #A69CAC;
-    --Ultra_Violet: #474973;
-    --Oxford_Blue: #161B33;
-    --Rick_Black: #0D0C1D;
-
-    /*Blur colors*/
-    --Almond-blur: #f1dac4ca;
-    --Rose_quarz-blur: #a69cacd4;
-    --Ultra_Violet-blur: #474973e0;
-    --Oxford_Blue-blur: #161b33e4;
-    --Rick_Black-blur: #0d0c1dd6;
-
-    /*Fonts*/
-    --title_subtitle_font: 'Raleway', sans-serif;
-    --general_text_font: 'Nunito', sans-serif;
-
-    /*Font Size*/
-    --title_size: 1.2rem;
-    --subtitle_size: 1.15rem;
-    --general_text-size:1.2rem;
-    --hyper_tyle_size: 5rem;
-}
-
 /*Other styles*/
 .down_scroll{
     margin-top: 15px;
@@ -38,15 +5,6 @@
     border-radius: 25px;
     margin-left: 25px;
     transform: scale(0.92);
-}
-
-/*HTML Style*/
-body{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
 }
 
 /*Navbar Styles -------------------------------------*/
@@ -101,6 +59,7 @@ body{
                     color: white;
                     padding: 10px;
                     transition: .3s all ease-in-out;
+                    
                 }
 
                 & .search_bar{
@@ -165,3 +124,4 @@ body{
     color: black;
 }
 
+/*-----------------------------------------------------*/
