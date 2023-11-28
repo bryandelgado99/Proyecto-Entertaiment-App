@@ -7,7 +7,7 @@ Descripción: Página web que permite buscar información acerca de temas de ent
 
 ## Paleta de colores:
 - Almond: #F1DAC4
-- Rose  uarz: #A69CAC
+- Rose  quarz: #A69CAC
 - Ultra Violet: #474973
 - Oxford Blue: #161B33
 - Rick Black: #0D0C1D
