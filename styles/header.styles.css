@@ -106,6 +106,7 @@
             color: white;
             transition: .3s all ease-in-out;
             padding:5px 0;
+            list-style: none;
         }
 
         & .nav ul .github_icon a .bxl-github:hover{
