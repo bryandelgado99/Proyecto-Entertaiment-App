@@ -1,3 +1,5 @@
+@import url("/styles/header.styles.css");
+
 * {
 	margin: 0;
 	padding: 0;
@@ -185,7 +187,7 @@ h1 {
 	height: 55px;
 	border-radius: 15px;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 1rem;
 }
 
 /*-----------------------------------------------------*/
