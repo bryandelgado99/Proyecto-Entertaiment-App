@@ -71,9 +71,7 @@ Para este trabajo vamos a generalizar la temática de entretenimiento, con el cu
 
     | Nombre | Descripción | Enlace |
     |----------|----------|----------|
-    | Spotify   | API oficial de Spotify   |  https://api.spotify.com.   |
-    | BillBoard API   | Api de Billboard hot 100   | https://billboard-api2.p.rapidapi.com/   |
-    | YT Music API    | Api oficial entregada por Google para obtener información de YT Music | youtube.googleapis.com  |
+    |   |  |     |
 
     Documentaciones:
     Spotify: https://developer.spotify.com/documentation/web-api/tutorials/getting-started
