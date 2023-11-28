@@ -1,0 +1,122 @@
+@import url("/styles/header.styles.css");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Raleway";
+}
+
+:root {
+	/*Colors*/
+	--Almond: #f1dac4;
+	--Rose_quarz: #a69cac;
+	--Ultra_Violet: #474973;
+	--Oxford_Blue: #161b33;
+	--Rick_Black: #0d0c1d;
+
+	/*Blur colors*/
+	--Almond-blur: #f1dac4ca;
+	--Rose_quarz-blur: #a69cacd4;
+	--Ultra_Violet-blur: #474973e0;
+	--Oxford_Blue-blur: #161b33e4;
+	--Rick_Black-blur: #0d0c1dd6;
+
+	/*Fonts*/
+	--title_subtitle_font: "Raleway", sans-serif;
+	--general_text_font: "Nunito", sans-serif;
+
+	/*Font Size*/
+	--title_size: 1.2rem;
+	--subtitle_size: 1.15rem;
+	--general_text-size: 1.2rem;
+	--hyper_tyle_size: 5rem;
+}
+
+/*HTML Style*/
+body {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(to right, #000, #fff);
+	color: white;
+}
+
+
+/*Busqueda*/
+h1 {
+	margin-top: 7%;
+	margin-bottom: 3%;
+}
+
+#searchForm {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 4%;
+}
+
+#buttonsubmit {
+	width: 4rem;
+	border-radius: 0 15px 15px 0;
+}
+
+#buttonsubmit img {
+	width: 3rem;
+	height: 3rem;
+}
+
+#titleInput {
+	width: 30rem;
+	height: 55px;
+	border-radius: 15px 0 0 15px;
+	text-align: center;
+	font-size: 15px;
+}
+
+/* Contenedor de canciones */
+#resultContainer {
+	width: 100%;
+}
+
+#resultContainerSong {
+	display: flex;
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid #000;
+}
+#infosongcontainer {
+	display: grid;
+	padding: 1rem;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 1.5rem;
+}
+#imgsongfoto {
+	height: 7rem;
+	border-radius: 150px;
+	margin: 0 2rem;
+}
+#titlesong {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+#author {
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+}
+#duracion {
+	grid-column: 3 / 4;
+	grid-row: 1 / 2;
+}
+#reproduccion {
+	grid-column: 4 / 5;
+	grid-row: 1 / 2;
+}
+
+#reproduccion img {
+	width: 75px;
+}
