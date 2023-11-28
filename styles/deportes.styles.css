@@ -40,9 +40,10 @@ body{
     padding: 0;
     justify-content: center;
     align-items: center;
+    background-color: var(--Rose_quarz-blur);
 }
 
-}
+
 /*Main styles*/
 /* Estilo para la sección ZONA DEPORTIVA */
 .zona-deportiva {
@@ -62,7 +63,7 @@ body{
 .secciones-principales section {
     flex: 1;
     padding: 10px;
-    border: 1px solid #f7f2f2;
+    border: 1px solid #ffffff;
 }
 /* Estilo para las imágenes dentro de las secciones */
 .secciones-principales .imagen-contenedor {
