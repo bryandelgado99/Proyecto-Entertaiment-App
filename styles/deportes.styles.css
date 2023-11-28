@@ -41,3 +41,108 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+}
+/*Main styles*/
+/* Estilo para la sección ZONA DEPORTIVA */
+.zona-deportiva {
+    text-align: center; /* Centra el texto */
+    background-color: #ffffff; /* Color de fondo diferente */
+    padding: 10px; /* Agrega relleno */
+}
+
+/* Estilo para el contenedor de las secciones principales */
+.secciones-principales {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+/* Estilo para cada sección principal */
+.secciones-principales section {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #f7f2f2;
+}
+/* Estilo para las imágenes dentro de las secciones */
+.secciones-principales .imagen-contenedor {
+    position: relative;
+}
+
+.secciones-principales img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.secciones-principales p {
+    position: absolute;
+    top: 50%; /* Alinea el texto en el centro verticalmente */
+    left: 50%; /* Alinea el texto en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centra completamente el texto */
+    color: #fff; /* Color del texto */
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold; /* Peso de la fuente */
+    text-align: center; /* Alineación del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra del texto para mayor legibilidad */
+}
+/* Estilo para las imágenes dentro de las secciones */
+.secciones-principales .imagen-contenedor {
+    position: relative;
+    overflow: hidden; /* Oculta cualquier parte de la imagen que desborde del contenedor */
+    height: 200px; /* Establece una altura fija para todas las imágenes */
+    border-radius: 8px;
+}
+
+.secciones-principales img {
+    width: 100%;
+    height: 100%; /* La imagen ocupará todo el alto del contenedor */
+    object-fit: cover; /* La imagen se ajusta manteniendo la proporción y cubre todo el contenedor */
+}
+
+.secciones-principales p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+/* Estilos adicionales para la tabla de posiciones */
+.posiciones-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.posiciones-table th,
+.posiciones-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #141414; /* Bordes de 1 píxel sólido */
+}
+
+.posiciones-table th {
+    background-color: #2d65b8;
+}
+
+
+
+/* Estilos para la información del equipo (nombre y logo) */
+.equipo-info {
+    display: flex;
+    align-items: center; /* Alinea el texto y el logo verticalmente */
+}
+
+.equipo-info span {
+    margin-right: 10px; /* Espaciado entre el texto y el logo */
+}
+
+.logo {
+    width: 30px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto; /* Mantiene la proporción original del logo */
+    
+}
